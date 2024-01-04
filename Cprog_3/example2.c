@@ -7,17 +7,16 @@ int main()
 	int length;
 	while (scanf("%s", seq) ==1)
 	{
- 	int count;
-        count =0;
+ 		int i,count;
+        	count =0;
 		length=strlen(seq);
-			int i;
-			for (i=0; i <=length; i++)
+		for (i=0; i <=length; i++)
+		{
+			if ( seq[i] == 'G'|| seq[i] =='C')
 			{
-				if ( seq[i] == 'G'|| seq[i] =='C')
-				{
-					count++;
-				}
+				count++;
 			}
+		}
 	printf("=> %.1f\n",(count*100.0)/length);
 	}
 }

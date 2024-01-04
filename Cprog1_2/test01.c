@@ -3,7 +3,7 @@
 
 int main()
 {
-char seq[ 1000 ];
-scanf("%s", seq);
+	char seq[1000];
+	scanf("%s", seq);
 
 }

@@ -3,9 +3,9 @@
 #include <string.h>
 int main()
 {
-char seq[ 1000 ];
-int length;
-scanf("%s", seq);
-length=strlen(seq);
-printf("the length is %d\n", length);
+	char seq[ 1000 ];
+	int length;
+	scanf("%s", seq);
+	length=strlen(seq);
+	printf("the length is %d\n", length);
 }

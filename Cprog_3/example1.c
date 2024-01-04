@@ -10,13 +10,13 @@ int main()
 	int count;
 	count = 0;
 	int i;
-	for (i=0; i <=1000; i++)
+	for (i=0; i<=length; i++)
 	{
 		if ( seq[i] == 'G'|| seq[i] =='C')
 		{
 			count++;
 		}
 	}
-printf("=> %f\n",count*100.0/length);
+	printf("=> %f\n",count*100.0/length);
 }
 
