@@ -46,9 +46,9 @@ int main()
 									gene[d+2-i+1]='\0'; //this properly terminates the string
 									if(strlen(gene)%3 == 0)// prokaryotic sequences  do not have introns
 									{
-										if(strlen(gene)>100)
+										if(strlen(gene)>100) // typically genes are larger than 100n
 										{
-											if(strlen(identifier) != 0)
+											if(strlen(identifier) != 0) // if sequences are provided without an identifier the program shouldn't print anything there
 											{
 												printf("%s\n",identifier);
 											}
