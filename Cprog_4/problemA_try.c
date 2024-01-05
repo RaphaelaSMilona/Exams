@@ -27,8 +27,8 @@ int main()
                 }
 		for(i=0; i<lengthseq; i++)
                 {
-			//This makes sure that the algorithm reads nucleic acid sequences
-			if(seq[i]=='A' || seq[i]=='T' || seq[i]=='G' || seq[i]=='C') 
+			//This makes sure that the algorithm reads nucleic acid sequences. N represents an ambiguous base while - and . usually represent deletions.
+			if(seq[i]=='A' || seq[i]=='T' || seq[i]=='G' || seq[i]=='C'|| seq[i]=='N'|| seq[i]=='.'|| seq[i]=='-') 
                 	{ 
 				//this is the main algorithm that finds the start and end codons and prints the coding sequence	
 				for(i=0; i<=lengthseq - 2; i++)
