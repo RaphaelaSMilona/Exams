@@ -39,12 +39,12 @@ int main()
                         		       	{
 							char codon[4];
 							strncpy(codon, seq+d, 3);
-							codon[3]='\0';
+							codon[3]='\0'; //this properly terminates the string
                                 	       		if(strcmp(codon,"TGA") == 0 || strcmp(codon, "TAA") == 0 || strcmp(codon,"TAG")== 0 ) //strcmp compares the  lexical relationship of two string and returns 0 when they are the same
 							{
 									strncpy(gene, seq+i, d+2-i+1);
 									gene[d+2-i+1]='\0'; //this properly terminates the string
-									if(strlen(gene)%3 == 0)// prokaryotic sequences  do not have introns
+									if(strlen(gene)%3 == 0) // prokaryotic sequences  do not have introns
 									{
 										if(strlen(gene)>100) // typically genes are larger than 100n
 										{
@@ -60,7 +60,6 @@ int main()
                                                                                         {
                                                                                                 printf("%s\n",identifier);
                                                                                         }
-											//the smallest genes are around 100 dp
 											printf("%s *This is most likely not a gene \n", gene);
 										}
 									}
