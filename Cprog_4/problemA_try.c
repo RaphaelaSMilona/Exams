@@ -48,7 +48,7 @@ int main()
 									{
 										if(strlen(gene)>100) // typically genes are larger than 100n
 										{
-											if(strlen(identifier) != 0) // if sequences are provided without an identifier the program shouldn't print anything there
+											if(strlen(identifier) != 0) // if the file of sequences provided doesn't contain identifiers the program shouldn't print anything there
 											{
 												printf("%s\n",identifier);
 											}
@@ -75,7 +75,7 @@ int main()
                        	 		}
 				}
 			}
-			else if (seq[0] != '>' && strlen(gene)==0) // The sequence is neither an identifier nor a constains exclusively the 4 nucleotides
+			else if (seq[0] != '>' && strlen(gene)==0) // The sequence is neither an identifier nor constains exclusively the 4 nucleotides
 			{
 				strcpy(message,"There are invalid characters in this sequence");
 			}
