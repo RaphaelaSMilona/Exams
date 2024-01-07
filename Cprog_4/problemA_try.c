@@ -8,8 +8,10 @@ int main()
 	//the average prokaryote gene length is typically around 500-3000bp
 	char seq[3000];
 	char identifier[3000];
+	int countR,countI;
 	while( scanf("%s",seq) == 1 )
 	{
+		countR++;
         	int lengthseq;
                 lengthseq=strlen(seq);
               	int i, a,b, d;
@@ -19,6 +21,7 @@ int main()
                 {
                        strncpy(identifier,seq,lengthseq);
                        identifier[lengthseq]='\0';
+			countI++;
                 }
 		//this turns all noucleotides to uppercase letters as this is the prerequisite in the if loops
 		for(a=0; a<=lengthseq; a++)
@@ -48,7 +51,7 @@ int main()
 									{
 										if(strlen(gene)>100) // typically genes are larger than 100n
 										{
-											if(strlen(identifier) != 0) // if the file of sequences provided doesn't contain identifiers the program shouldn't print anything there
+											if(strlen(identifier) != 0 && (countR==countI+1)) // if the file of sequences provided doesn't contain identifiers the program shouldn't print anything there
 											{
 												printf("%s\n",identifier);
 											}
@@ -56,7 +59,7 @@ int main()
 										}
 										else
 										{
- 											if(strlen(identifier) != 0)
+ 											if(strlen(identifier) != 0 && (countR==countI+1))
                                                                                         {
                                                                                                 printf("%s\n",identifier);
                                                                                         }
@@ -66,7 +69,7 @@ int main()
 									else if(strlen(gene)%3 != 0)
 									{
 										printf("The sequence ");
-										if(strlen(identifier) != 0)
+										if(strlen(identifier) != 0 && (countR==countI+1))
                                                                                         {
                                                                                                 printf("with the identifier %s ",identifier);
                                                                                         }
