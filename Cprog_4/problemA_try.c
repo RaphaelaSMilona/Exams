@@ -36,7 +36,7 @@ int main()
 				//this is the main algorithm that finds the start and end codons and prints the coding sequence	
 				for(i=0; i<=lengthseq - 2; i++)
 				{
-					if (seq[i] == 'A' && seq[i + 1] == 'T'  && seq[i + 2] == 'G') //start codon
+					if (seq[i] == 'A' && (seq[i + 1] == 'T'|| seq[i + 1] == 'U')  && seq[i + 2] == 'G') //start codon
                   	   		{
                   		             	for (d=i+3; d<=lengthseq; d++) //the codons consist of 3 nucleotidea
                         		       	{
