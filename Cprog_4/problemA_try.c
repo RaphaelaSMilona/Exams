@@ -68,7 +68,7 @@ int main()
 										printf("The sequence ");
 										if(strlen(identifier) != 0)
                                                                                         {
-                                                                                                printf("with thw identofier %s",identifier);
+                                                                                                printf("with the identifier %s ",identifier);
                                                                                         }
 										printf("may be a gene containing introns and needs to be analazed with another tool.\n");
 									}
