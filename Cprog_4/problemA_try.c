@@ -63,7 +63,7 @@ int main()
                                                                                         {
                                                                                                 printf("%s\n",identifier);
                                                                                         }
-											printf("%s *This is most likely not a gene \n", gene);
+											printf("%s *This is most likely not a coding sequence \n", gene);
 										}
 									}
 									else if(strlen(gene)%3 != 0)
