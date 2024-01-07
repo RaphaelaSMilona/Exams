@@ -21,7 +21,7 @@ int main()
                 {
                        strncpy(identifier,seq,lengthseq);
                        identifier[lengthseq]='\0';
-			countI++;
+			countI=countR;
                 }
 		//this turns all noucleotides to uppercase letters as this is the prerequisite in the if loops
 		for(a=0; a<=lengthseq; a++)
