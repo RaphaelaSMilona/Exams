@@ -68,12 +68,25 @@ int main()
 									}
 									else if(strlen(gene)%3 != 0)
 									{
-										printf("The sequence ");
-										if(strlen(identifier) != 0 && (countR==countI+1))
-                                                                                        {
-                                                                                                printf("with the identifier %s ",identifier);
-                                                                                        }
-										printf("may be a gene containing introns and needs to be analazed with another tool.\n");
+										if(strlen(gene)>100)
+										{
+											printf("The sequence ");
+											if(strlen(identifier) != 0 && (countR==countI+1))
+                                                                                        	{
+                                                                                                	printf("with the identifier %s ",identifier);
+                                                                                        	}
+											printf("may be a gene containing introns and needs to be analazed with another tool.\n");
+										}
+										else
+										{
+											printf("The sequence ");
+											if(strlen(identifier) != 0 && (countR==countI+1))
+                                                                                        	{
+                                                                                                	printf("with the identifier %s ",identifier);
+                                                                                        	}
+											printf("may be a gene containing introns and needs to be analazed with another tool. But it most likely is not a gene.\n");
+											
+										}
 									}
 									i=lengthseq;
 									d=lengthseq;
