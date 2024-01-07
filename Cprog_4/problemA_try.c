@@ -2,7 +2,7 @@
 #include <math.h>
 #include <string.h>
 #include <ctype.h>
-
+// This program searches dor and prints DNA or RNA coding regions of prokaryotic genes and contains annotations
 int main()
 {
 	//the average prokaryote gene length is typically around 500-3000bp
@@ -30,8 +30,8 @@ int main()
                 }
 		for(i=0; i<lengthseq; i++)
                 {
-			//This makes sure that the algorithm reads nucleic acid sequences, N represents an ambiguous base 
-			if(seq[i]=='A' || seq[i]=='T' || seq[i]=='G' || seq[i]=='C'|| seq[i]=='N') 
+			//This makes sure that the algorithm reads nucleic acid sequences, U is for RNA N represents an ambiguous base 
+			if(seq[i]=='A' || seq[i]=='T' || seq[i]=='U' || seq[i]=='G' || seq[i]=='C'|| seq[i]=='N') 
                 	{ 
 				//this is the main algorithm that finds the start and end codons and prints the coding sequence	
 				for(i=0; i<=lengthseq - 2; i++)
@@ -43,7 +43,7 @@ int main()
 							char codon[4];
 							strncpy(codon, seq+d, 3);
 							codon[3]='\0'; //this properly terminates the string
-                                	       		if(strcmp(codon,"TGA") == 0 || strcmp(codon, "TAA") == 0 || strcmp(codon,"TAG")== 0 ) //strcmp compares the  lexical relationship of two string and returns 0 when they are the same
+                                	       		if(strcmp(codon,"TGA") == 0 || strcmp(codon, "TAA") == 0 || strcmp(codon,"TAG")== 0 || strcmp(codon,"UAG")== 0 || strcmp(codon,"UAA")== 0 || strcmp(codon,"UGA")== 0) //strcmp compares the  lexical relationship of two string and returns 0 when they are the same
 							{
 									strncpy(gene, seq+i, d+2-i+1);
 									gene[d+2-i+1]='\0'; //this properly terminates the string
