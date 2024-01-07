@@ -2,7 +2,7 @@
 #include <math.h>
 #include <string.h>
 #include <ctype.h>
-// This program searches dor and prints DNA or RNA coding regions of prokaryotic genes and contains annotations
+// This program searches for and prints DNA or RNA coding regions of prokaryotic genes and contains annotations
 int main()
 {
 	//the average prokaryote gene length is typically around 500-3000bp
