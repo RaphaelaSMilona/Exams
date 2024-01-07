@@ -65,7 +65,12 @@ int main()
 									}
 									else if(strlen(gene)%3 != 0)
 									{
-										printf("The sequence with the identifier %s may be a gene containing introns and needs to be analazed with another tool.\n", identifier);
+										printf("The sequence ");
+										if(strlen(identifier) != 0)
+                                                                                        {
+                                                                                                printf("with thw identofier %s",identifier);
+                                                                                        }
+										printf("may be a gene containing introns and needs to be analazed with another tool.\n");
 									}
 									i=lengthseq;
 									d=lengthseq;
