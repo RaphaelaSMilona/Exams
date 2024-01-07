@@ -8,7 +8,7 @@ int main()
 	//the average prokaryote gene length is typically around 500-3000bp
 	char seq[3000];
 	char identifier[3000];
-	int countR,countI;
+	int countR,countI; // the counter makes sure in the program that the identifier printed is the one right before the sequence
 	while( scanf("%s",seq) == 1 )
 	{
 		countR++;
