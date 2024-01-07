@@ -96,7 +96,7 @@ int main()
                        	 		}
 				}
 			}
-			else if (seq[0] != '>' && strlen(gene)==0) // The sequence is neither an identifier nor constains exclusively the 4 nucleotides
+			else if (seq[0] != '>' && strlen(gene)==0) // The sequence is neither an identifier nor constains exclusively nucleotides
 			{
 				strcpy(message,"There are invalid characters in this sequence");
 			}
